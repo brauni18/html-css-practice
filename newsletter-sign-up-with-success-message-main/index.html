@@ -18,7 +18,7 @@
 <body>
 
   <!-- Sign-up form start -->
-  <div class="main-card">  
+  <div class="main-card" id="signup-card">  
     <div class="text-section">
       <h1 id="headline">Stay updated!</h1>
 
@@ -32,35 +32,44 @@
       </ul>
 
       <div class="email-block">
-        <p id="email-label">Email address</p>
+        <div class="email-label-block">
+          <p id="email-label">Email address</p>
+          <p class="error-message hidden" id="error-message">Valid email required</p>
+        </div>
         <input  type="email" id="email-input" placeholder="email@company.com">
       </div>
 
-      <button class="subscribe-button">Subscribe to monthly newsletter</button>
+      <button class="subscribe-button" id="submit-button">Subscribe to monthly newsletter</button>
 
     </div>
     <div class="image-section">
       <img src="./assets/images/illustration-sign-up-desktop.svg" alt="information illustration">
     </div>
-
   </div>  
+
+  <!-- Success message start -->
+  <div class="main-card hidden" id="success-card">
+    <div class="success-section">
+      <img src="./assets/images/icon-success.svg" alt="success icon" class="success-icon">
+      <h1 class="success-title">Thanks for subscribing!</h1>
+      
+      <p class="success-message">A confirmation email has been sent to <strong id="user-email">ash@loremcompany.com</strong>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+
+      <button class="dismiss-button" id="dismiss-button">Dismiss message</button>
+    </div>
+  </div>
+  <!-- Success message end -->  
 
     <!-- Sign-up form end -->
 
-  <!-- Success message start -->
-<!-- 
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message -->
-
-  <!-- Success message end -->
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+
+  <script src ="./script.js"></script>
 </body>
 </html>

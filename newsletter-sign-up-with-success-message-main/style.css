@@ -59,6 +59,15 @@ body{
     align-items: center;
     margin-bottom: 20px;
 }
+.email-label-block {
+   display: flex;
+   flex-direction: row;
+}
+.email-block{
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+}
 #email-label{
     font-size: 12px;
     margin-bottom: 10px;
@@ -71,11 +80,6 @@ body{
     border: 1px solid hsl(0, 0%,58%);
     box-sizing: border-box;
 }
-.email-block{
-    width: 100%;
-    gap: 10px;
-    margin-top: 20px;
-}
 .subscribe-button{
     width: 100%;
     background-color: hsl(234, 29%, 20%);
@@ -84,4 +88,74 @@ body{
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+.enabled-button{
+    transition: background 0.3s ease;
+    /*adding gradient to button*/
+    background: linear-gradient(90deg, hsl(4, 100%, 67%), hsl(22, 90%, 66%));
+}
+
+.hidden {
+    display: none;
+}
+
+/* Error States */
+.error-message {
+    
+    color: hsl(4, 100%, 67%);
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: bold;
+   margin-left: auto;
+}
+
+.error-input {
+    border-color: hsl(4, 100%, 67%);
+    background-color: hsl(4, 100%, 95%);
+    color: hsl(4, 100%, 67%);
+}
+
+/* Success Page Styles */
+.success-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    max-width: 400px;
+}
+
+.success-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 30px;
+}
+
+.success-title {
+    font-size: 55px;
+    color: hsl(234, 29%, 20%);
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.success-message {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: hsl(234, 29%, 20%);
+}
+
+.dismiss-button {
+    width: 100%;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    &:hover {
+        background: linear-gradient(90deg, hsl(4, 100%, 67%), hsl(22, 90%, 66%));
+    }
 }
